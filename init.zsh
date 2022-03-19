@@ -8,7 +8,7 @@
 p6df::modules::kubernetes::deps() {
   ModuleDeps=(
     ohmyzsh/ohmyzsh:plugins/kubectl
-    p6m7g8/p6kubernetes
+    p6m7g8-dotfiles/p6kubernetes
   )
 }
 
