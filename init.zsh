@@ -43,14 +43,11 @@ p6df::modules::kubernetes::external::brew() {
   brew install kubebuilder
   brew install kubecfg
   brew install kubectx
-  brew install kubeless
-  brew install kubeprod
   brew install kubernetes-service-catalog-client
   brew install kubeseal
   brew install kubespy
   brew install minikube
 
-  brew install --cask kube-cluster
   brew install --cask kube-forwarder
   brew install --cask kubecontext
   brew install --cask kubernetic
