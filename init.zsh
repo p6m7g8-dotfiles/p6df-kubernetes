@@ -60,8 +60,33 @@ p6df::modules::kubernetes::external::brew() {
 ######################################################################
 #<
 #
+# Function: p6df::modules::kubernetes::init()
+#
+#>
+######################################################################
+p6df::modules::kubernetes::init() {
+
+  p6df::modules::kubernetes::prompt::init
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::kubernetes::prompt::init()
+#
+#>
+######################################################################
+p6df::modules::kubernetes::prompt::init() {
+
+  p6df::core::prompt::line::add "p6df::modules::kubernetes::prompt::line"
+}
+
+######################################################################
+#<
+#
 # Function: p6df::modules::kubernetes::prompt::line()
 #
+#  Depends:	 p6_env
 #>
 ######################################################################
 p6df::modules::kubernetes::prompt::line() {

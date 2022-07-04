@@ -47,11 +47,13 @@
 - p6df::modules::kubernetes::ctx(ctx)
 - p6df::modules::kubernetes::deps()
 - p6df::modules::kubernetes::external::brew()
+- p6df::modules::kubernetes::init()
 - p6df::modules::kubernetes::minikube()
 - p6df::modules::kubernetes::minikube::start()
 - p6df::modules::kubernetes::ns(ns)
 - p6df::modules::kubernetes::off()
 - p6df::modules::kubernetes::on()
+- p6df::modules::kubernetes::prompt::init()
 - p6df::modules::kubernetes::prompt::line()
 - p6df::modules::kubernetes::vscodes()
 
