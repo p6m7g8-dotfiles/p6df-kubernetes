@@ -7,8 +7,9 @@
 ######################################################################
 p6df::modules::kubernetes::deps() {
   ModuleDeps=(
-    ohmyzsh/ohmyzsh:plugins/kubectl
+    p6m7g8-dotfiles/p6df-zsh
     p6m7g8-dotfiles/p6kubernetes
+    ohmyzsh/ohmyzsh:plugins/kubectl
   )
 }
 
@@ -85,7 +86,6 @@ p6df::modules::kubernetes::prompt::init() {
 #
 # Function: p6df::modules::kubernetes::prompt::line()
 #
-#  Depends:	 p6_env
 #>
 ######################################################################
 p6df::modules::kubernetes::prompt::line() {
@@ -98,7 +98,6 @@ p6df::modules::kubernetes::prompt::line() {
 #
 # Function: p6df::modules::kubernetes::on()
 #
-#  Depends:	 p6_env
 #  Environment:	 KUBECONFIG
 #>
 ######################################################################
@@ -114,7 +113,6 @@ p6df::modules::kubernetes::on() {
 #
 # Function: p6df::modules::kubernetes::off()
 #
-#  Depends:	 p6_env
 #  Environment:	 KUBECONFIG P6_KUBE_CFG P6_KUBE_NS
 #>
 ######################################################################
@@ -133,7 +131,6 @@ p6df::modules::kubernetes::off() {
 #  Args:
 #	ctx -
 #
-#  Depends:	 p6_env p6_run
 #  Environment:	 P6_KUBE_CFG
 #>
 ######################################################################
@@ -155,7 +152,6 @@ p6df::modules::kubernetes::ctx() {
 #  Args:
 #	ns -
 #
-#  Depends:	 p6_env p6_run
 #  Environment:	 P6_KUBE_NS
 #>
 ######################################################################
@@ -172,7 +168,6 @@ p6df::modules::kubernetes::ns() {
 #
 # Function: p6df::modules::kubernetes::minikube()
 #
-#  Depends:	 p6_run
 #  Environment:	 MINIKUBE_ACTIVE_DOCKERD
 #>
 ######################################################################
@@ -188,7 +183,6 @@ p6df::modules::kubernetes::minikube() {
 #
 # Function: p6df::modules::kubernetes::minikube::start()
 #
-#  Depends:	 p6_run
 #>
 ######################################################################
 p6df::modules::kubernetes::minikube::start() {
