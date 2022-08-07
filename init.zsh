@@ -23,7 +23,7 @@ p6df::modules::kubernetes::deps() {
 p6df::modules::kubernetes::vscodes() {
 
   # kubernetes
-  code --install-extension ipedrazas.kubernetes-snippets@0.1.9
+  code --install-extension ipedrazas.kubernetes-snippets
   code --install-extension ms-vscode-remote.remote-containers
 }
 
