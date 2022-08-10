@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 ######################################################################
 #<
 #
@@ -25,6 +26,8 @@ p6df::modules::kubernetes::vscodes() {
   # kubernetes
   code --install-extension ipedrazas.kubernetes-snippets
   code --install-extension ms-vscode-remote.remote-containers
+  
+  p6_return_void
 }
 
 ######################################################################
@@ -55,6 +58,8 @@ p6df::modules::kubernetes::external::brew() {
   sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
   sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
   brew install --cask minishift
+
+  p6_rerturn_void
 }
 
 ######################################################################
@@ -67,6 +72,8 @@ p6df::modules::kubernetes::external::brew() {
 p6df::modules::kubernetes::init() {
 
   p6df::modules::kubernetes::prompt::init
+
+  p6_return_void
 }
 
 ######################################################################
@@ -106,6 +113,8 @@ p6df::modules::kubernetes::on() {
   KUBECONFIG=$HOME/.kube/config
   chmod 600 $KUBECONFIG
   p6_env_export "KUBECONFIG" "$KUBECONFIG"
+
+  p6_return_void
 }
 
 ######################################################################
@@ -121,6 +130,8 @@ p6df::modules::kubernetes::off() {
   p6_env_export_un "KUBECONFIG"
   p6_env_export_un "P6_KUBE_CFG"
   p6_env_export_un "P6_KUBE_NS"
+
+  p6_return_void
 }
 
 ######################################################################
@@ -142,6 +153,8 @@ p6df::modules::kubernetes::ctx() {
   p6_env_export "P6_KUBE_CFG" "$ctx"
 
   p6df::modules::kubernetes::on
+
+  p6_return_void
 }
 
 ######################################################################
@@ -161,6 +174,8 @@ p6df::modules::kubernetes::ns() {
   p6_run_code "kubens $ns"
 
   p6_env_export "P6_KUBE_NS" "$ns"
+
+  p6_return_void
 }
 
 ######################################################################
@@ -176,6 +191,8 @@ p6df::modules::kubernetes::minikube() {
   p6_run_code $(p6_run_code minikube -p minikube docker-env)
   p6df::modules::kubernetes::ctx "$MINIKUBE_ACTIVE_DOCKERD"
   p6df::modules::kubernetes::ns "default"
+
+  p6_return_void
 }
 
 ######################################################################
@@ -190,4 +207,6 @@ p6df::modules::kubernetes::minikube::start() {
   p6_run_code "minikube start"
 
   p6df::modules::kubernetes::minikube
+
+  p6_return_void
 }
