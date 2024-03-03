@@ -26,7 +26,7 @@ p6df::modules::kubernetes::vscodes() {
   # kubernetes
   code --install-extension ipedrazas.kubernetes-snippets
   code --install-extension ms-vscode-remote.remote-containers
-  
+
   p6_return_void
 }
 
@@ -59,7 +59,7 @@ p6df::modules::kubernetes::external::brew() {
   sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
   brew install --cask minishift
 
-  p6_rerturn_void
+  p6_return_void
 }
 
 ######################################################################
