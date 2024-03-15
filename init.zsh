@@ -134,6 +134,23 @@ p6df::modules::kubernetes::ctx() {
 ######################################################################
 #<
 #
+# Function: str ctx = p6df::modules::kubernetes::ctx::get()
+#
+#  Returns:
+#	str - ctx
+#
+#>
+######################################################################
+p6df::modules::kubernetes::ctx::get() {
+
+  local ctx=$(p6_run_code "kubectx -c")
+
+  p6_return_str "$ctx"
+}
+
+######################################################################
+#<
+#
 # Function: p6df::modules::kubernetes::ns(ns)
 #
 #  Args:

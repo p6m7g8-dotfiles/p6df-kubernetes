@@ -54,6 +54,7 @@
 - p6df::modules::kubernetes::on()
 - p6df::modules::kubernetes::prompt::line()
 - p6df::modules::kubernetes::vscodes()
+- str ctx = p6df::modules::kubernetes::ctx::get()
 
 
 
