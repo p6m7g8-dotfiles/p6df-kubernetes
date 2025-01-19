@@ -43,7 +43,6 @@ p6df::modules::kubernetes::external::brew() {
 
   p6df::modules::homebrew::cli::brew::install kind
 
-  p6df::modules::homebrew::cli::brew::install kubeaudit
   p6df::modules::homebrew::cli::brew::install kubebuilder
   p6df::modules::homebrew::cli::brew::install kubecfg
   p6df::modules::homebrew::cli::brew::install kubectx
@@ -51,7 +50,6 @@ p6df::modules::kubernetes::external::brew() {
   p6df::modules::homebrew::cli::brew::install kubespy
   p6df::modules::homebrew::cli::brew::install minikube
 
-  p6df::modules::homebrew::cli::brew::install --cask kube-forwarder
   p6df::modules::homebrew::cli::brew::install --cask kubecontext
   p6df::modules::homebrew::cli::brew::install --cask kubernetic
 
