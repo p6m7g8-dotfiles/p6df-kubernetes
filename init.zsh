@@ -55,7 +55,6 @@ p6df::modules::kubernetes::external::brew() {
 
   sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
   sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-  p6df::modules::homebrew::cli::brew::install --cask minishift
 
   p6_return_void
 }
