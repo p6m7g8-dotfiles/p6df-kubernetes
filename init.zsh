@@ -53,8 +53,8 @@ p6df::modules::kubernetes::external::brew() {
   p6df::modules::homebrew::cli::brew::install --cask kubecontext
   p6df::modules::homebrew::cli::brew::install --cask kubernetic
 
-  sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-  sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+  sudo chown root:wheel "$(brew --prefix)"/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+  sudo chmod u+s "$(brew --prefix)"/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
 
   p6_return_void
 }
@@ -62,11 +62,11 @@ p6df::modules::kubernetes::external::brew() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::kubernetes::prompt::line()
+# Function: p6df::modules::kubernetes::prompt::mod()
 #
 #>
 ######################################################################
-p6df::modules::kubernetes::prompt::line() {
+p6df::modules::kubernetes::prompt::mod() {
 
   p6_kubernetes_prompt_info
 }
@@ -81,8 +81,8 @@ p6df::modules::kubernetes::prompt::line() {
 ######################################################################
 p6df::modules::kubernetes::on() {
 
-  KUBECONFIG=$HOME/.kube/config
-  chmod 600 $KUBECONFIG
+  KUBECONFIG="$HOME"/.kube/config
+  chmod 600 "$KUBECONFIG"
   p6_env_export "KUBECONFIG" "$KUBECONFIG"
 
   p6_return_void
@@ -176,7 +176,7 @@ p6df::modules::kubernetes::ns() {
 ######################################################################
 p6df::modules::kubernetes::minikube() {
 
-  p6_run_code $(p6_run_code minikube -p minikube docker-env)
+  p6_run_code "$(p6_run_code minikube -p minikube docker-env)"
   p6df::modules::kubernetes::ctx "$MINIKUBE_ACTIVE_DOCKERD"
   p6df::modules::kubernetes::ns "default"
 
