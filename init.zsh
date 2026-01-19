@@ -76,7 +76,7 @@ p6df::modules::kubernetes::prompt::mod() {
 #
 # Function: p6df::modules::kubernetes::on()
 #
-#  Environment:	 KUBECONFIG
+#  Environment:	 HOME KUBECONFIG
 #>
 ######################################################################
 p6df::modules::kubernetes::on() {
