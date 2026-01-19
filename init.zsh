@@ -62,11 +62,11 @@ p6df::modules::kubernetes::external::brew() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::kubernetes::prompt::line()
+# Function: p6df::modules::kubernetes::prompt::mod()
 #
 #>
 ######################################################################
-p6df::modules::kubernetes::prompt::line() {
+p6df::modules::kubernetes::prompt::mod() {
 
   p6_kubernetes_prompt_info
 }
