@@ -39,19 +39,19 @@ p6df::modules::kubernetes::vscodes() {
 ######################################################################
 p6df::modules::kubernetes::external::brew() {
 
-  p6df::modules::homebrew::cli::brew::install buildkit
+  p6df::core::homebrew::cli::brew::install buildkit
 
-  p6df::modules::homebrew::cli::brew::install kind
+  p6df::core::homebrew::cli::brew::install kind
 
-  p6df::modules::homebrew::cli::brew::install kubebuilder
-  p6df::modules::homebrew::cli::brew::install kubecfg
-  p6df::modules::homebrew::cli::brew::install kubectx
-  p6df::modules::homebrew::cli::brew::install kubeseal
-  p6df::modules::homebrew::cli::brew::install kubespy
-  p6df::modules::homebrew::cli::brew::install minikube
+  p6df::core::homebrew::cli::brew::install kubebuilder
+  p6df::core::homebrew::cli::brew::install kubecfg
+  p6df::core::homebrew::cli::brew::install kubectx
+  p6df::core::homebrew::cli::brew::install kubeseal
+  p6df::core::homebrew::cli::brew::install kubespy
+  p6df::core::homebrew::cli::brew::install minikube
 
-  p6df::modules::homebrew::cli::brew::install --cask kubecontext
-  p6df::modules::homebrew::cli::brew::install --cask kubernetic
+  p6df::core::homebrew::cli::brew::install --cask kubecontext
+  p6df::core::homebrew::cli::brew::install --cask kubernetic
 
   sudo chown root:wheel "$(brew --prefix)"/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
   sudo chmod u+s "$(brew --prefix)"/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
