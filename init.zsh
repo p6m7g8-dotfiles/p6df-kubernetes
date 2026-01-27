@@ -24,8 +24,8 @@ p6df::modules::kubernetes::deps() {
 p6df::modules::kubernetes::vscodes() {
 
   # kubernetes
-  code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
-  code --install-extension ipedrazas.kubernetes-snippets
+  p6df::modules::vscode::extension::install ms-kubernetes-tools.vscode-kubernetes-tools
+  p6df::modules::vscode::extension::install ipedrazas.kubernetes-snippets
 
   p6_return_void
 }
