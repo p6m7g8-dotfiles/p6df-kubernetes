@@ -36,11 +36,15 @@ TODO: Add a short summary of this module.
 ##### p6df-kubernetes/init.zsh
 
 - `p6df::modules::kubernetes::ctx(ctx)`
+  - Args:
+    - ctx - 
 - `p6df::modules::kubernetes::deps()`
 - `p6df::modules::kubernetes::external::brew()`
 - `p6df::modules::kubernetes::minikube()`
 - `p6df::modules::kubernetes::minikube::start()`
 - `p6df::modules::kubernetes::ns(ns)`
+  - Args:
+    - ns - 
 - `p6df::modules::kubernetes::off()`
 - `p6df::modules::kubernetes::on()`
 - `p6df::modules::kubernetes::prompt::mod()`
