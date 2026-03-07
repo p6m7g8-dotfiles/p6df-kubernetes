@@ -198,3 +198,17 @@ p6df::modules::kubernetes::minikube::start() {
 
   p6_return_void
 }
+
+######################################################################
+#<
+#
+# Function: p6df::modules::kubernetes::mcp()
+#
+#>
+######################################################################
+p6df::modules::kubernetes::mcp() {
+
+  p6df::core::homebrew::cli::brew::install kubernetes-mcp-server
+
+  p6_return_void
+}
