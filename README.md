@@ -17,7 +17,9 @@
 
 ## Summary
 
-TODO: Add a short summary of this module.
+p6df module for Kubernetes: CLI tools (`kubectl`, `helm`, `minikube`, `k9s`),
+prompt integration, and MCP server (`kubernetes-mcp-server` via brew) for
+AI-driven cluster, pod, and resource management.
 
 ## Contributing
 
@@ -37,14 +39,15 @@ TODO: Add a short summary of this module.
 
 - `p6df::modules::kubernetes::ctx(ctx)`
   - Args:
-    - ctx - 
+    - ctx
 - `p6df::modules::kubernetes::deps()`
 - `p6df::modules::kubernetes::external::brew()`
+- `p6df::modules::kubernetes::mcp()`
 - `p6df::modules::kubernetes::minikube()`
 - `p6df::modules::kubernetes::minikube::start()`
 - `p6df::modules::kubernetes::ns(ns)`
   - Args:
-    - ns - 
+    - ns
 - `p6df::modules::kubernetes::off()`
 - `p6df::modules::kubernetes::on()`
 - `p6df::modules::kubernetes::prompt::mod()`
