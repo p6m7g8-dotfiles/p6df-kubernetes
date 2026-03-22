@@ -11,6 +11,9 @@ p6df::modules::kubernetes::deps() {
     p6m7g8-dotfiles/p6df-zsh
     p6m7g8-dotfiles/p6kubernetes
     ohmyzsh/ohmyzsh:plugins/kubectl
+    ahmedasmar/devops-claude-skills:k8s-troubleshooter
+    geored/sre-skill
+    rohitg00/awesome-claude-code-toolkit:plugins/k8s-helper
   )
 }
 
