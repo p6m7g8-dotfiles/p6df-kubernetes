@@ -20,6 +20,25 @@ p6df::modules::kubernetes::deps() {
 ######################################################################
 #<
 #
+# Function: p6df::modules::kubernetes::home::symlinks()
+#
+#  Environment:	 HOME P6_DFZ_SRC_DIR
+#>
+######################################################################
+p6df::modules::kubernetes::home::symlinks() {
+
+  p6_file_symlink "$P6_DFZ_SRC_DIR/ahmedasmar/devops-claude-skills/k8s-troubleshooter/skills"                                "$HOME/.claude/skills/k8s-troubleshooter"
+  p6_file_symlink "$P6_DFZ_SRC_DIR/geored/sre-skill/debugging-kubernetes-incidents"                                          "$HOME/.claude/skills/debugging-kubernetes-incidents"
+  p6_file_symlink "$P6_DFZ_SRC_DIR/akin-ozer/cc-devops-skills/devops-skills-plugin/skills/k8s-debug"                         "$HOME/.claude/skills/k8s-debug"
+  p6_file_symlink "$P6_DFZ_SRC_DIR/akin-ozer/cc-devops-skills/devops-skills-plugin/skills/k8s-yaml-generator"                "$HOME/.claude/skills/k8s-yaml-generator"
+  p6_file_symlink "$P6_DFZ_SRC_DIR/akin-ozer/cc-devops-skills/devops-skills-plugin/skills/k8s-yaml-validator"                "$HOME/.claude/skills/k8s-yaml-validator"
+
+  p6_return_void
+}
+
+######################################################################
+#<
+#
 # Function: p6df::modules::kubernetes::vscodes()
 #
 #>
