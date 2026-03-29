@@ -232,5 +232,8 @@ p6df::modules::kubernetes::mcp() {
 
   p6df::core::homebrew::cli::brew::install kubernetes-mcp-server
 
+  p6df::modules::anthropic::mcp::server::add "kubernetes" "kubernetes-mcp-server"
+  p6df::modules::openai::mcp::server::add "kubernetes" "kubernetes-mcp-server"
+
   p6_return_void
 }
