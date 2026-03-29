@@ -55,11 +55,11 @@ p6df::modules::kubernetes::vscodes() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::kubernetes::external::brew()
+# Function: p6df::modules::kubernetes::external::brews()
 #
 #>
 ######################################################################
-p6df::modules::kubernetes::external::brew() {
+p6df::modules::kubernetes::external::brews() {
 
   p6df::core::homebrew::cli::brew::install buildkit
 
