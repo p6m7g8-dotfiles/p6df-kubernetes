@@ -1,5 +1,11 @@
 # shellcheck shell=bash
 ######################################################################
+#<
+#
+# Function: p6df::modules::kubernetes::deps()
+#
+#>
+######################################################################
 p6df::modules::kubernetes::deps() {
   ModuleDeps=(
     p6m7g8-dotfiles/p6df-zsh
@@ -12,6 +18,13 @@ p6df::modules::kubernetes::deps() {
 }
 
 ######################################################################
+#<
+#
+# Function: p6df::modules::kubernetes::home::symlinks()
+#
+#  Environment:	 HOME P6_DFZ_SRC_DIR
+#>
+######################################################################
 p6df::modules::kubernetes::home::symlinks() {
 
   p6_file_symlink "$P6_DFZ_SRC_DIR/ahmedasmar/devops-claude-skills/k8s-troubleshooter/skills"                                "$HOME/.claude/skills/k8s-troubleshooter"
@@ -23,6 +36,12 @@ p6df::modules::kubernetes::home::symlinks() {
   p6_return_void
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::kubernetes::external::brews()
+#
+#>
 ######################################################################
 p6df::modules::kubernetes::external::brews() {
 
@@ -47,6 +66,12 @@ p6df::modules::kubernetes::external::brews() {
 }
 
 ######################################################################
+#<
+#
+# Function: p6df::modules::kubernetes::mcp()
+#
+#>
+######################################################################
 p6df::modules::kubernetes::mcp() {
 
   p6df::core::homebrew::cli::brew::install kubernetes-mcp-server
@@ -57,6 +82,12 @@ p6df::modules::kubernetes::mcp() {
   p6_return_void
 }
 ######################################################################
+#<
+#
+# Function: p6df::modules::kubernetes::vscodes()
+#
+#>
+######################################################################
 p6df::modules::kubernetes::vscodes() {
 
   # kubernetes
@@ -66,31 +97,6 @@ p6df::modules::kubernetes::vscodes() {
   p6_return_void
 }
 
-######################################################################
-#<
-#
-# Function: p6df::modules::kubernetes::deps()
-#
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::kubernetes::home::symlinks()
-#
-#  Environment:	 HOME P6_DFZ_SRC_DIR
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::kubernetes::vscodes()
-#
-#>
-######################################################################
-#<
-#
-# Function: p6df::modules::kubernetes::external::brews()
-#
-#>
 ######################################################################
 #<
 #
@@ -231,9 +237,3 @@ p6df::modules::kubernetes::minikube::start() {
   p6_return_void
 }
 
-######################################################################
-#<
-#
-# Function: p6df::modules::kubernetes::mcp()
-#
-#>
