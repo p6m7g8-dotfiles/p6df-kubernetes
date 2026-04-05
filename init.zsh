@@ -39,22 +39,6 @@ p6df::modules::kubernetes::home::symlinks() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::kubernetes::vscodes()
-#
-#>
-######################################################################
-p6df::modules::kubernetes::vscodes() {
-
-  # kubernetes
-  p6df::modules::vscode::extension::install ms-kubernetes-tools.vscode-kubernetes-tools
-  p6df::modules::vscode::extension::install ipedrazas.kubernetes-snippets
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
 # Function: p6df::modules::kubernetes::external::brews()
 #
 #>
@@ -77,6 +61,38 @@ p6df::modules::kubernetes::external::brews() {
 
   sudo chown root:wheel "$(brew --prefix)"/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
   sudo chmod u+s "$(brew --prefix)"/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+
+  p6_return_void
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::kubernetes::mcp()
+#
+#>
+######################################################################
+p6df::modules::kubernetes::mcp() {
+
+  p6df::core::homebrew::cli::brew::install kubernetes-mcp-server
+
+  p6df::modules::anthropic::mcp::server::add "kubernetes" "kubernetes-mcp-server"
+  p6df::modules::openai::mcp::server::add "kubernetes" "kubernetes-mcp-server"
+
+  p6_return_void
+}
+######################################################################
+#<
+#
+# Function: p6df::modules::kubernetes::vscodes()
+#
+#>
+######################################################################
+p6df::modules::kubernetes::vscodes() {
+
+  # kubernetes
+  p6df::modules::vscode::extension::install ms-kubernetes-tools.vscode-kubernetes-tools
+  p6df::modules::vscode::extension::install ipedrazas.kubernetes-snippets
 
   p6_return_void
 }
@@ -221,19 +237,3 @@ p6df::modules::kubernetes::minikube::start() {
   p6_return_void
 }
 
-######################################################################
-#<
-#
-# Function: p6df::modules::kubernetes::mcp()
-#
-#>
-######################################################################
-p6df::modules::kubernetes::mcp() {
-
-  p6df::core::homebrew::cli::brew::install kubernetes-mcp-server
-
-  p6df::modules::anthropic::mcp::server::add "kubernetes" "kubernetes-mcp-server"
-  p6df::modules::openai::mcp::server::add "kubernetes" "kubernetes-mcp-server"
-
-  p6_return_void
-}
