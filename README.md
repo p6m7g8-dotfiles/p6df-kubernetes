@@ -17,9 +17,7 @@
 
 ## Summary
 
-p6df module for Kubernetes: CLI tools (`kubectl`, `helm`, `minikube`, `k9s`),
-prompt integration, and MCP server (`kubernetes-mcp-server` via brew) for
-AI-driven cluster, pod, and resource management.
+TODO: Add a short summary of this module.
 
 ## Contributing
 
@@ -37,22 +35,31 @@ AI-driven cluster, pod, and resource management.
 
 ##### p6df-kubernetes/init.zsh
 
+- `p6df::modules::kubernetes::deps()`
+- `p6df::modules::kubernetes::external::brews()`
+- `p6df::modules::kubernetes::home::symlinks()`
+- `p6df::modules::kubernetes::mcp()`
+- `p6df::modules::kubernetes::prompt::context()`
+- `p6df::modules::kubernetes::vscodes()`
+
+#### p6df-kubernetes/lib
+
+##### p6df-kubernetes/lib/ctx.zsh
+
 - `p6df::modules::kubernetes::ctx(ctx)`
   - Args:
     - ctx
-- `p6df::modules::kubernetes::deps()`
-- `p6df::modules::kubernetes::external::brew()`
-- `p6df::modules::kubernetes::mcp()`
-- `p6df::modules::kubernetes::minikube()`
-- `p6df::modules::kubernetes::minikube::start()`
 - `p6df::modules::kubernetes::ns(ns)`
   - Args:
     - ns
 - `p6df::modules::kubernetes::off()`
 - `p6df::modules::kubernetes::on()`
-- `p6df::modules::kubernetes::prompt::mod()`
-- `p6df::modules::kubernetes::vscodes()`
 - `str ctx = p6df::modules::kubernetes::ctx::get()`
+
+##### p6df-kubernetes/lib/minikube.zsh
+
+- `p6df::modules::kubernetes::minikube()`
+- `p6df::modules::kubernetes::minikube::start()`
 
 ## Hierarchy
 
@@ -60,9 +67,11 @@ AI-driven cluster, pod, and resource management.
 .
 ├── init.zsh
 ├── lib
+│   ├── ctx.zsh
+│   └── minikube.zsh
 └── README.md
 
-2 directories, 2 files
+2 directories, 4 files
 ```
 
 ## Author
